@@ -1,0 +1,10 @@
+version: "3.6"
+services:
+  mongo0:
+    hostname: mongo0
+    container_name: mongo0
+    image: mongo
+    ports:
+      - "27017:27017"
+    restart: always
+    command: --storageEngine wiredTiger --replSet rs0
